@@ -88,11 +88,24 @@ endfunction: build_phase
 //  phase - stores the current phase 
 //-----------------------------------------------------------------------------
 task config_template::run_phase(uvm_phase phase);
-
+  string name;
+  
   // Wait for active-high reset
   @(posedge rstn);
-  do_monitor();
+  
+  name = get_string_val();
 endtask: run_phase
 
+//-----------------------------------------------------------------------------
+// Function: get_imm
+// Get the immediate value from the I format instruction
+//
+// Returns:
+//  String representation of the name 
+//-----------------------------------------------------------------------------
+function string config_template::get_string_val();
+  return "muneeb";      
+endfunction: get_string_val    
+    
 4) Close of Include guard
 `endif
