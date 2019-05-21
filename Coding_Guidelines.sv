@@ -58,6 +58,8 @@ Coding Guidelines
 15. Do not use #0 procedural delays:
       Often, using a non-blocking assignment ( <= ) solves this class of problem.
 16. Do not use hard-coded values. Always use constants/parameters. 
+17. Always use one-class definition per file.
+18. Keep the file name same as the class name.
 
 You can use more coding guidlines by referring the below link, however, the above mentioned guidelines must be followed!
 
