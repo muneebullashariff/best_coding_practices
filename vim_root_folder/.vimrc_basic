@@ -95,10 +95,11 @@ set formatoptions=tcrq
 set guitablabel=%N/\ %t\ %M
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"" Abbreviations
+" Setting the required abbreviations
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-iab td // TODO:
-iab ms // MSHA:
+"" After entering the abbreviation press space
+so $HOME/.vim/etc/abbrev.vim 
+call AbbrevFunction()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" Auto Load of files
