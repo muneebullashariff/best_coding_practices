@@ -1,0 +1,41 @@
+--langdef=systemverilog
+--langmap=systemverilog:.sv.svh.svi
+--regex-systemverilog=/^[ \t]*(virtual)?[ \t]*class[ \t]*([a-zA-Z_0-9]+)/\2/c,class/
+
+--regex-systemverilog=/^[ \t]*(virtual)?[ \t]*task[ \t]*.*::([a-zA-Z_0-9]+)[\t]*[(;]/\2/t,task/
+--regex-systemverilog=/^[ \t]*(virtual)?[ \t]*function[ \t]*.*::([a-zA-Z_0-9]+)[ \t]*[(;]/\2/f,function/
+
+--regex-systemverilog=/^[ \t]*module[ \t]*([a-zA-Z_0-9]+)/\1/m,module/
+--regex-systemverilog=/^[ \t]*program[ \t]*([a-zA-Z_0-9]+)/\1/p,program/
+--regex-systemverilog=/^[ \t]*interface[ \t]*([a-zA-Z_0-9]+)/\1/i,interface/
+--regex-systemverilog=/^[ \t]*typedef[ \t]+.*[ \t]+([a-zA-Z_0-9]+)[ \t]*;/\1/e,typedef/
+--regex-systemverilog=/^[ \t]*`define[ \t]*([a-zA-Z_0-9]+)/`\1/d,define/
+
+--regex-systemverilog=/^[ \t]*(static)?[ \t]*(local)?[ \t]*(private)?[ \t]*(rand)?[ \t]*shortint[ \t]*([a-zA-Z_0-9]+).*/`\5/v,variable/
+--regex-systemverilog=/^[ \t]*(static)?[ \t]*(local)?[ \t]*(private)?[ \t]*(rand)?[ \t]*int[ \t]*(unsigned)?[ \t]*([a-zA-Z_0-9]+).*/`\6/v,variable/
+--regex-systemverilog=/^[ \t]*(static)?[ \t]*(local)?[ \t]*(private)?[ \t]*(rand)?[ \t]*longint[ \t]*(unsigned)?[ \t]*([a-zA-Z_0-9]+).*/`\6/v,variable/
+--regex-systemverilog=/^[ \t]*(static)?[ \t]*(local)?[ \t]*(private)?[ \t]*(rand)?[ \t]*byte[ \t]*([a-zA-Z_0-9]+).*/`\5/v,variable/
+--regex-systemverilog=/^[ \t]*(static)?[ \t]*(local)?[ \t]*(private)?[ \t]*(rand)?[ \t]*bit[ \t]*([a-zA-Z_0-9]+).*/`\5/v,variable/
+--regex-systemverilog=/^[ \t]*(static)?[ \t]*(local)?[ \t]*(private)?[ \t]*(rand)?[ \t]*logic[ \t]*([a-zA-Z_0-9]+).*/`\5/v,variable/
+--regex-systemverilog=/^[ \t]*(static)?[ \t]*(local)?[ \t]*(private)?[ \t]*(rand)?[ \t]*reg[ \t]*([a-zA-Z_0-9]+).*/`\5/v,variable/
+--regex-systemverilog=/^[ \t]*(static)?[ \t]*(local)?[ \t]*(private)?[ \t]*(rand)?[ \t]*integer[ \t]*([a-zA-Z_0-9]+).*/`\5/v,variable/
+--regex-systemverilog=/^[ \t]*(static)?[ \t]*(local)?[ \t]*(private)?[ \t]*(rand)?[ \t]*time[ \t]*([a-zA-Z_0-9]+).*/`\5/v,variable/
+
+--regex-systemverilog=/^[ \t]*(static)?[ \t]*(local)?[ \t]*(private)?[ \t]*real[ \t]*([a-zA-Z_0-9]+).*/`\4/v,variable
+--regex-systemverilog=/^[ \t]*(static)?[ \t]*(local)?[ \t]*(private)?[ \t]*shortreal[ \t]*([a-zA-Z_0-9]+).*/`\4/v,variable/
+
+--regex-systemverilog=/^[ \t]*(static)?[ \t]*(local)?[ \t]*(private)?[ \t]*chandle[ \t]*([a-zA-Z_0-9]+).*/`\4/v,variable/
+--regex-systemverilog=/^[ \t]*(static)?[ \t]*(local)?[ \t]*(private)?[ \t]*string[ \t]*([a-zA-Z_0-9]+).*/`\4/v,variable/
+
+--regex-systemverilog=/^[ \t]*(static)?[ \t]*(local)?[ \t]*(private)?[ \t]*event[ \t]*([a-zA-Z_0-9]+).*/`\4/v,variable/
+
+--regex-systemverilog=/^[ \t]*`SVT_REPLACEABLE_DEFINE\([ \t]*([a-zA-Z_0-9]+),.*\)/`\1/d,define/
+
+--systemverilog-kinds=+ctfmpied
+
+--langdef=altsystemverilog
+--regex-altsystemverilog=/^[ \t]*(extern)?[ \t]*(virtual)?[ \t]*(protected)?[ \t]*class[ \t]*([a-zA-Z_0-9]+)/\4/c,class/
+--regex-altsystemverilog=/^[ \t]*(extern)?[ \t]*(virtual)?[ \t]*(protected)?[ \t]*task[ \t]*.*[ \t]+([a-zA-Z_0-9]+)[\t]*[(;]/\4/t,task
+--regex-altsystemverilog=/^[ \t]*(extern)?[ \t]*(virtual)?[ \t]*(protected)?[ \t]*function[ \t]*.*[ \t]+([a-zA-Z_0-9]+)[ \t]*[(;]/\4/f,function/
+--regex-altsystemverilog=/^[ \t]*(virtual)?[ \t]*task[ \t]*.*[ \t]+([a-zA-Z_0-9]+)[\t]*[(;]/\2/t,task/
+--regex-altsystemverilog=/^[ \t]*(virtual)?[ \t]*function[ \t]*.*[ \t]+([a-zA-Z_0-9]+)[ \t]*[(;]/\2/f,function/

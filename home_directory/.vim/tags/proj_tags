@@ -1,0 +1,476 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+0	..\regfile_unit_test.sv	/^      \/\/set reg 0 to all 1s... should fail at build time since this doesn't exist$/;"	v
+1	..\inst_history.svh	/^      \/\/source reg 1 read after write condition?$/;"	v
+1	..\reg_fetcher_unit_test.sv	/^      \/\/set reg 1 to all 1s$/;"	v
+1	..\regfile_unit_test.sv	/^      \/\/set reg 1 to all 1s$/;"	v
+2	..\inst_history.svh	/^      \/\/source reg 2 read after write condition?$/;"	v
+31	..\reg_fetcher_unit_test.sv	/^      \/\/set reg 31 and check it's what was set$/;"	v
+31	..\regfile_unit_test.sv	/^      \/\/set reg 31 and check it's what was set$/;"	v
+CSR_W	..\riscv_vip_pkg.sv	/^  parameter int unsigned CSR_W       = 64;$/;"	a
+DEPTH	..\inst_history_unit_test.sv	/^  parameter int DEPTH = 5;$/;"	a
+FUNCT3_W	..\riscv_vip_pkg.sv	/^  parameter int unsigned FUNCT3_W    = 14-12+1;$/;"	a
+FUNCT7_W	..\riscv_vip_pkg.sv	/^  parameter int unsigned FUNCT7_W    = 31-25+1;$/;"	a
+HEX_FILES_FN	..\hex_file_analyzer_unit_test.sv	/^      string HEX_FILES_FN = "..\/riscv_tests_hexgen\/build\/hex_files.txt";$/;"	v
+IMM_B_W	..\riscv_vip_pkg.sv	/^  parameter int unsigned IMM_B_W     = (31-25+1)+(11-7+1)+1; \/\/+1 since B drops bit 0   $/;"	a
+IMM_HIGH_W	..\riscv_vip_pkg.sv	/^  parameter int unsigned IMM_HIGH_W  = 31-12+1;$/;"	a
+IMM_J_W	..\riscv_vip_pkg.sv	/^  parameter int unsigned IMM_J_W     = (31-12+1)+1;          \/\/+1 since J drops bit 0$/;"	a
+IMM_LOW_W	..\riscv_vip_pkg.sv	/^  parameter int unsigned IMM_LOW_W   = 31-20+1;$/;"	a
+NUM_MEM_BYTES	..\hex_file_analyzer.svh	/^  parameter int unsigned NUM_MEM_BYTES = 2**20;  $/;"	a
+NUM_X_REGS	..\riscv_vip_pkg.sv	/^  parameter int unsigned NUM_X_REGS  = 32;  \/\/The number of x registers$/;"	a
+OPCODE_W	..\riscv_vip_pkg.sv	/^  parameter int unsigned OPCODE_W    = 7;$/;"	a
+REGSEL_W	..\riscv_vip_pkg.sv	/^  parameter int unsigned REGSEL_W    = 5;$/;"	a
+RV_ADDR_W	..\riscv_vip_pkg.sv	/^  parameter int unsigned RV_ADDR_W   = 32;  $/;"	a
+SHAMT_W	..\riscv_vip_pkg.sv	/^  parameter int unsigned SHAMT_W     = 24-20+1;              \/\/shift amount$/;"	a
+XLEN	..\riscv_vip_pkg.sv	/^  parameter int unsigned XLEN        = 32;  \/\/The size of the x registers $/;"	a
+__testsuite	..\.__testsuite.sv	/^module __testsuite;$/;"	m
+__testsuite	..\uvm\.__testsuite.sv	/^module __testsuite;$/;"	m
+`BREADCRUMB	..\riscv_vip_defines.svh	/^`define BREADCRUMB(msg) $display("%m %s line %0d %s",`__FILE__,`__LINE__, msg)/;"	d
+`B_INSTS_LIST	..\riscv_vip_defines.svh	/^`define B_INSTS_LIST            BEQ, BNE, BLT, BGE, BLTU, BGEU$/;"	d
+`IMM_ALL_ONES	..\riscv_vip_defines.svh	/^`define IMM_ALL_ONES(x) {$bits(x){1'b1}}$/;"	d
+`IMM_MAX_POS	..\riscv_vip_defines.svh	/^`define IMM_MAX_POS(x)  {1'b0,{($bits(x)-1){1'b1}}}$/;"	d
+`IMM_MIN_NEG	..\riscv_vip_defines.svh	/^`define IMM_MIN_NEG(x)  {1'b1,{($bits(x)-1){1'b0}}}$/;"	d
+`INSTS_WITH_NO_RS_LIST	..\riscv_vip_defines.svh	/^`define INSTS_WITH_NO_RS_LIST   `U_INSTS_LIST,`J_INSTS_LIST,FENCE,FENCE_I,ECALL,EBREAK,CSRRWI,CSRRSI,CSRRCI$/;"	d
+`INSTS_W_NO_RD_LIST	..\riscv_vip_defines.svh	/^`define INSTS_W_NO_RD_LIST      `B_INSTS_LIST,`S_INSTS_LIST, FENCE,ECALL,EBREAK$/;"	d
+`INSTS_W_RD_RS1_RS2_LIST	..\riscv_vip_defines.svh	/^`define INSTS_W_RD_RS1_RS2_LIST `R_INSTS_LIST$/;"	d
+`INSTS_W_RS2_LIST	..\riscv_vip_defines.svh	/^`define INSTS_W_RS2_LIST        `B_INSTS_LIST,`S_INSTS_LIST,`R_INSTS_LIST$/;"	d
+`I_NONSPECIAL_INSTS_LIST	..\riscv_vip_defines.svh	/^`define I_NONSPECIAL_INSTS_LIST JALR,LB,LH,LW,LBU,LHU,ADDI,SLTI,SLTIU,XORI,ANDI$/;"	d
+`I_SHAMT_INSTS_LIST	..\riscv_vip_defines.svh	/^`define I_SHAMT_INSTS_LIST      SLLI, SRLI, SRAI$/;"	d
+`J_INSTS_LIST	..\riscv_vip_defines.svh	/^`define J_INSTS_LIST            JAL$/;"	d
+`NUM_CORES	..\uvm\uvc_env.svh	/^`define NUM_CORES 1$/;"	d
+`R_INSTS_LIST	..\riscv_vip_defines.svh	/^`define R_INSTS_LIST            ADD,SUB,SLL,SLT,SLTU,XOR,SRL,SRA,OR,AND$/;"	d
+`S_INSTS_LIST	..\riscv_vip_defines.svh	/^`define S_INSTS_LIST            SB,SH,SW$/;"	d
+`U_INSTS_LIST	..\riscv_vip_defines.svh	/^`define U_INSTS_LIST            LUI,AUIPC$/;"	d
+`_CSRS_INCLUDED_	..\csrs.svh	/^`define _CSRS_INCLUDED_$/;"	d
+`_DECODER_INCLUDE_	..\decoder.svh	/^`define _DECODER_INCLUDE_$/;"	d
+`_HEX_FILE_ANALYZER_INCLUDE_	..\hex_file_analyzer.svh	/^`define _HEX_FILE_ANALYZER_INCLUDE_$/;"	d
+`_I32_AGENT_INCLUDED_	..\uvm\i32_agent.svh	/^`define _I32_AGENT_INCLUDED_$/;"	d
+`_I32_COV_SUB_INCLUDED_	..\uvm\i32_cov_subscriber.svh	/^`define _I32_COV_SUB_INCLUDED_$/;"	d
+`_I32_ITEM_INCLUDED_	..\uvm\i32_item.svh	/^`define _I32_ITEM_INCLUDED_$/;"	d
+`_I32_MONITOR_INCLUDED_	..\uvm\i32_monitor.svh	/^`define _I32_MONITOR_INCLUDED_$/;"	d
+`_INSTRUCTION_INCLUDED_	..\instruction.svh	/^`define _INSTRUCTION_INCLUDED_$/;"	d
+`_INST_HISTORY_COV_SUB_INCLUDED_	..\uvm\inst_history_subscriber.svh	/^`define _INST_HISTORY_COV_SUB_INCLUDED_$/;"	d
+`_INST_HISTORY_INCLUDED_	..\inst_history.svh	/^`define _INST_HISTORY_INCLUDED_$/;"	d
+`_REGFILE_INCLUDED_	..\regfile.svh	/^`define _REGFILE_INCLUDED_$/;"	d
+`_REG_FETCHER_INCLUDED_	..\reg_fetcher.svh	/^`define _REG_FETCHER_INCLUDED_$/;"	d
+`_RISCV_VIP_BASE_TEST_INCLUDED_	..\uvm\test\riscv_vip_base_test.svh	/^`define _RISCV_VIP_BASE_TEST_INCLUDED_$/;"	d
+`_RISCV_VIP_CLASS_PKG_SV_	..\riscv_vip_class_pkg.sv	/^`define _RISCV_VIP_CLASS_PKG_SV_$/;"	d
+`_RISCV_VIP_CSR_IF_INCLUDED_	..\riscv_vip_csr_if.sv	/^`define _RISCV_VIP_CSR_IF_INCLUDED_$/;"	d
+`_RISCV_VIP_INST_IF_INCLUDED_	..\riscv_vip_inst_if.sv	/^`define _RISCV_VIP_INST_IF_INCLUDED_$/;"	d
+`_RISCV_VIP_PKG_SV_	..\riscv_vip_pkg.sv	/^`define _RISCV_VIP_PKG_SV_$/;"	d
+`_RISCV_VIP_REGFILE_IF_INCLUDED_	..\riscv_vip_regfile_if.sv	/^`define _RISCV_VIP_REGFILE_IF_INCLUDED_$/;"	d
+`_RISCV_VIP_TEST_PKG_INCLUDED_	..\uvm\test\riscv_vip_test_pkg.sv	/^`define _RISCV_VIP_TEST_PKG_INCLUDED_$/;"	d
+`_RISCV_VIP_UVC_PKG_SV_	..\uvm\riscv_vip_uvc_pkg.sv	/^`define _RISCV_VIP_UVC_PKG_SV_$/;"	d
+`_UVC_ENV_INCLUDED_	..\uvm\uvc_env.svh	/^`define _UVC_ENV_INCLUDED_$/;"	d
+addr	..\hex_file_analyzer.svh	/^      int unsigned addr;$/;"	v
+analyze_file	..\hex_file_analyzer.svh	/^  virtual function void analyze_file(string hex_fn);$/;"	f
+analyze_files	..\hex_file_analyzer.svh	/^  virtual function void analyze_files(string file_list_fn);$/;"	f
+b_imm_t	..\riscv_vip_pkg.sv	/^  typedef logic [IMM_B_W-1    :0] b_imm_t;     \/\/B immediate, includes bit 0$/;"	e
+b_imm_t	..\riscv_vip_pkg.sv	/^  typedef logic [IMM_B_W-1    :0] b_imm_t;     \/\/B immediate, includes bit 0$/;"	v
+b_inst_t	..\riscv_vip_pkg.sv	/^  } b_inst_t;$/;"	e
+bins_hit	..\instruction_unit_test.sv	/^       int bins_hit = 0;     $/;"	v
+bins_hit	..\instruction_unit_test.sv	/^      int bins_hit = 0;$/;"	v
+bins_hit	..\instruction_unit_test.sv	/^     int bins_hit = 0;$/;"	v
+bins_hit	..\instruction_unit_test.sv	/^    int bins_hit = 0;$/;"	v
+bins_hit	..\instruction_unit_test.sv	/^   int bins_hit = 0;$/;"	v
+build	..\.__testsuite.sv	/^  function void build();$/;"	f
+build	..\.testrunner.sv	/^  function void build();$/;"	f
+build	..\csrs_unit_test.sv	/^  function void build();$/;"	f
+build	..\hex_file_analyzer_unit_test.sv	/^  function void build();$/;"	f
+build	..\inst_history_unit_test.sv	/^  function void build();$/;"	f
+build	..\instruction_unit_test.sv	/^  function void build();$/;"	f
+build	..\reg_fetcher_unit_test.sv	/^  function void build();$/;"	f
+build	..\regfile_unit_test.sv	/^  function void build();$/;"	f
+build	..\uvm\.__testsuite.sv	/^  function void build();$/;"	f
+build	..\uvm\.testrunner.sv	/^  function void build();$/;"	f
+build	..\uvm\i32_agent_unit_test.sv	/^  function void build();$/;"	f
+build	..\uvm\test\riscv_vip_base_test_unit_test.sv	/^  function void build();$/;"	f
+build	..\uvm\uvc_env_unit_test.sv	/^  function void build();$/;"	f
+build_phase	..\uvm\i32_agent.svh	/^  virtual function void build_phase(uvm_phase phase);$/;"	f
+build_phase	..\uvm\i32_agent_unit_test.sv	/^  function void build_phase(uvm_phase phase);$/;"	f
+build_phase	..\uvm\i32_monitor.svh	/^  virtual function void build_phase(uvm_phase phase);$/;"	f
+build_phase	..\uvm\inst_history_subscriber.svh	/^  virtual function void build_phase(uvm_phase phase);$/;"	f
+build_phase	..\uvm\test\riscv_vip_base_test.svh	/^  virtual function void build_phase(uvm_phase phase);$/;"	f
+build_phase	..\uvm\test\riscv_vip_base_test_unit_test.sv	/^  function void build_phase(uvm_phase phase);$/;"	f
+build_phase	..\uvm\uvc_env.svh	/^function void uvc_env::build_phase(uvm_phase phase);$/;"	f
+build_phase	..\uvm\uvc_env_unit_test.sv	/^  function void build_phase(uvm_phase phase);$/;"	f
+clk	..\csrs_unit_test.sv	/^  logic clk;$/;"	v
+clk	..\hex_file_analyzer_unit_test.sv	/^  logic clk;$/;"	v
+clk	..\inst_history_unit_test.sv	/^  logic clk;$/;"	v
+clk	..\instruction_unit_test.sv	/^  logic clk;$/;"	v
+clk	..\reg_fetcher_unit_test.sv	/^  logic clk;$/;"	v
+clk	..\regfile_unit_test.sv	/^  logic clk;$/;"	v
+clk	..\uvm\i32_agent_unit_test.sv	/^  logic clk;$/;"	v
+clk	..\uvm\test\riscv_vip_base_test_unit_test.sv	/^  logic clk;$/;"	v
+clk	..\uvm\uvc_env_unit_test.sv	/^  logic clk;$/;"	v
+commit_inst	..\inst_history.svh	/^  virtual function void commit_inst(inst32 inst);$/;"	f
+commit_inst	..\inst_history_unit_test.sv	/^  function void commit_inst(inst32 inst);$/;"	f
+connect_phase	..\uvm\i32_agent.svh	/^  virtual function void connect_phase(uvm_phase phase);$/;"	f
+connect_phase	..\uvm\i32_agent_unit_test.sv	/^  function void connect_phase(uvm_phase phase);$/;"	f
+connect_phase	..\uvm\test\riscv_vip_base_test_unit_test.sv	/^  function void connect_phase(uvm_phase phase);$/;"	f
+connect_phase	..\uvm\uvc_env.svh	/^function void uvc_env::connect_phase(uvm_phase phase);$/;"	f
+connect_phase	..\uvm\uvc_env_unit_test.sv	/^  function void connect_phase(uvm_phase phase);$/;"	f
+cov	..\instruction_unit_test.sv	/^       real cov;    $/;"	v
+cov	..\instruction_unit_test.sv	/^      real cov = 0;$/;"	v
+cov	..\instruction_unit_test.sv	/^     real cov = 0;$/;"	v
+cov	..\instruction_unit_test.sv	/^    real cov;$/;"	v
+cov_per_bin	..\inst_history_unit_test.sv	/^      real cov_per_bin;$/;"	v
+create_i_inst	..\instruction_unit_test.sv	/^  function i_inst_t create_i_inst(imm_low_t _imm,$/;"	f
+create_r_inst	..\instruction_unit_test.sv	/^  function i_inst_t create_r_inst(funct7_t _funct7,$/;"	f
+csr_id_t	..\riscv_vip_pkg.sv	/^  } csr_id_t;$/;"	e
+csr_t	..\riscv_vip_pkg.sv	/^  typedef logic [CSR_W-1     :0]  csr_t; $/;"	e
+csr_t	..\riscv_vip_pkg.sv	/^  typedef logic [CSR_W-1     :0]  csr_t; $/;"	v
+csrs	..\csrs.svh	/^class csrs;$/;"	c
+csrs_t	..\riscv_vip_pkg.sv	/^  } csrs_t;$/;"	e
+csrs_unit_test	..\csrs_unit_test.sv	/^module csrs_unit_test;$/;"	m
+curr_inst	..\riscv_vip_inst_if.sv	/^   logic [31:0] curr_inst;$/;"	v
+curr_pc	..\riscv_vip_inst_if.sv	/^   logic [31:0]  curr_pc;$/;"	v
+cycle	..\inst_history_unit_test.sv	/^      int cycle;$/;"	v
+cycle	..\instruction.svh	/^  int unsigned cycle;  \/\/The clock cycle associated with commit of the instruction$/;"	v
+decode_inst16	..\decoder.svh	/^  virtual function inst16 decode_inst16(bit[15:0] inst_arg);$/;"	f
+decode_inst32	..\decoder.svh	/^  virtual function inst32 decode_inst32(bit[31:0] inst_arg);$/;"	f
+decoder	..\decoder.svh	/^class decoder;$/;"	c
+decoder	..\riscv_vip_class_pkg.sv	/^  typedef class decoder;   $/;"	e
+do_print	..\uvm\i32_item.svh	/^  virtual function void do_print(uvm_printer printer);$/;"	f
+do_trasact_e	..\uvm\i32_monitor.svh	/^    event  do_trasact_e;$/;"	v
+end_of_elaboration	..\uvm\test\riscv_vip_base_test.svh	/^  function void end_of_elaboration(); $/;"	f
+end_tracker	..\uvm\i32_monitor.svh	/^   virtual function void end_tracker();$/;"	f
+examine	..\inst_history.svh	/^  virtual function void examine( inst32 curr_inst, inst32 older_inst );$/;"	f
+exp_cov	..\instruction_unit_test.sv	/^                                  real exp_cov); $/;"	v
+exp_cov	..\instruction_unit_test.sv	/^                               real exp_cov$/;"	v
+exp_cov	..\instruction_unit_test.sv	/^                      real exp_cov$/;"	v
+exp_cov	..\instruction_unit_test.sv	/^          real exp_cov = 100.0*(i+1)\/$size(I_NONSPECIAL_INSTS);   $/;"	v
+exp_cov	..\instruction_unit_test.sv	/^          real exp_cov = 100.0*(i+1)\/$size(I_SHAMT_INSTS);   $/;"	v
+exp_cov	..\instruction_unit_test.sv	/^         real exp_cov = 100.0*(i+1)\/$size(S_INSTS);   $/;"	v
+exp_cov	..\instruction_unit_test.sv	/^      real exp_cov;   $/;"	v
+exp_cov	..\instruction_unit_test.sv	/^     real exp_cov;   $/;"	v
+expected	..\instruction_unit_test.sv	/^     string expected = "0055a023 S SW X5, 0(X11)";$/;"	v
+fail_msg	..\instruction_unit_test.sv	/^            string fail_msg = $psprintf("I nonspecial_inst_x_imm_cov = %d, expect %d" , cov, exp_cov);$/;"	v
+fail_msg	..\instruction_unit_test.sv	/^          string fail_msg;          $/;"	v
+fail_msg	..\instruction_unit_test.sv	/^         string fail_msg;         $/;"	v
+fetch_regs	..\reg_fetcher.svh	/^  virtual function void fetch_regs(inst32 i32);$/;"	f
+file	..\hex_file_analyzer.svh	/^    int unsigned file = $fopen(file_list_fn,"r");$/;"	v
+file	..\instruction.svh	/^  \/\/This is the value of x[rs2] from the reg file at decode stage and may be different than the $/;"	v
+first	..\instruction_unit_test.sv	/^        bit first = (i == 0);$/;"	v
+first	..\instruction_unit_test.sv	/^        bit first;$/;"	v
+first	..\instruction_unit_test.sv	/^       bit first = (i == 0);        $/;"	v
+format_hex_string	..\instruction.svh	/^  static function string format_hex_string(bit[31:0] bits);$/;"	f
+fscan_result	..\hex_file_analyzer.svh	/^    int fscan_result;$/;"	v
+funct3_t	..\riscv_vip_pkg.sv	/^  typedef logic [FUNCT3_W-1   :0] funct3_t;   \/\/$/;"	e
+funct3_t	..\riscv_vip_pkg.sv	/^  typedef logic [FUNCT3_W-1   :0] funct3_t;   \/\/$/;"	v
+funct3op_t	..\riscv_vip_pkg.sv	/^  function automatic funct3op_t funct3op_from_isb_inst(inst_enum_t inst);$/;"	f
+funct3op_t	..\riscv_vip_pkg.sv	/^  typedef  bit[FUNCT3_W+OPCODE_W-1:0] funct3op_t;   $/;"	e
+funct7_t	..\riscv_vip_pkg.sv	/^  typedef logic [FUNCT7_W-1   :0] funct7_t;   \/\/funct7 instruction field  $/;"	e
+funct7_t	..\riscv_vip_pkg.sv	/^  typedef logic [FUNCT7_W-1   :0] funct7_t;   \/\/funct7 instruction field  $/;"	v
+funct7funct3op_t	..\riscv_vip_pkg.sv	/^  function automatic funct7funct3op_t funct7funct3op_from_r_inst(inst_enum_t inst);$/;"	f
+funct7funct3op_t	..\riscv_vip_pkg.sv	/^  typedef  bit[FUNCT7_W+FUNCT3_W+OPCODE_W-1:0] funct7funct3op_t;   $/;"	e
+get_cross_cov	..\inst_history.svh	/^  virtual function real get_cross_cov();$/;"	f
+get_cycle	..\csrs.svh	/^  virtual function csr_t get_cycle();$/;"	f
+get_funct3	..\instruction.svh	/^  virtual function funct3_t get_funct3();$/;"	f
+get_funct7	..\instruction.svh	/^  virtual function funct7_t get_funct7();$/;"	f
+get_imm	..\instruction.svh	/^  virtual function b_imm_t get_imm();$/;"	f
+get_imm	..\instruction.svh	/^  virtual function imm_high_t get_imm();$/;"	f
+get_imm	..\instruction.svh	/^  virtual function imm_low_t get_imm();$/;"	f
+get_imm	..\instruction.svh	/^  virtual function j_imm_t get_imm();$/;"	f
+get_imm_cov	..\instruction.svh	/^  virtual function real get_imm_cov();$/;"	f
+get_imm_string	..\instruction.svh	/^  virtual function string get_imm_string();$/;"	f
+get_imm_string	..\instruction.svh	/^ virtual function string get_imm_string();$/;"	f
+get_inst_enum	..\instruction.svh	/^  virtual function inst_enum_t get_inst_enum();$/;"	f
+get_m_csrs	..\csrs.svh	/^  virtual function csrs_t get_m_csrs();$/;"	f
+get_m_x_regfile_array	..\regfile.svh	/^  virtual function x_regfile_array_t get_m_x_regfile_array();$/;"	f
+get_name_string	..\instruction.svh	/^  virtual function string get_name_string();$/;"	f
+get_nonspecial_imm_cov	..\instruction.svh	/^  virtual function real get_nonspecial_imm_cov();$/;"	f
+get_nonspecial_inst_x_imm_cov	..\instruction.svh	/^  virtual function real get_nonspecial_inst_x_imm_cov();$/;"	f
+get_opcode	..\instruction.svh	/^  virtual function opcode_t get_opcode();$/;"	f
+get_rd	..\instruction.svh	/^  virtual function reg_id_t get_rd();$/;"	f
+get_rs1	..\instruction.svh	/^  virtual function reg_id_t get_rs1();$/;"	f
+get_rs1_val	..\instruction.svh	/^  virtual function xlen_t get_rs1_val();$/;"	f
+get_rs2	..\instruction.svh	/^  virtual function reg_id_t get_rs2();$/;"	f
+get_rs2_val	..\instruction.svh	/^  virtual function xlen_t get_rs2_val();$/;"	f
+get_rvg_major_opcode	..\instruction.svh	/^  virtual function rvg_major_opcode_t get_rvg_major_opcode();$/;"	f
+get_shamt	..\instruction.svh	/^  virtual function shamt_t get_shamt();     $/;"	f
+get_shamt_cov	..\instruction.svh	/^  virtual function real get_shamt_cov();$/;"	f
+get_shamt_from_imm	..\instruction.svh	/^  static function shamt_t get_shamt_from_imm(imm_low_t imm);$/;"	f
+get_shamt_inst_x_shamt_cov	..\instruction.svh	/^  virtual function real get_shamt_inst_x_shamt_cov();$/;"	f
+get_sinst_x_imm_cov	..\instruction.svh	/^  virtual function real get_sinst_x_imm_cov();$/;"	f
+get_x	..\regfile.svh	/^  virtual function  xlen_t get_x(int unsigned i);$/;"	f
+has_core_id	..\uvm\i32_agent.svh	/^    bit has_core_id;    $/;"	v
+has_imm	..\instruction.svh	/^  virtual function bit has_imm();$/;"	f
+has_rd	..\instruction.svh	/^  virtual function bit has_rd();$/;"	f
+has_rf_vi	..\uvm\i32_agent.svh	/^    bit has_rf_vi;$/;"	v
+has_rs1	..\instruction.svh	/^  virtual function bit has_rs1();$/;"	f
+has_rs1_val_set	..\instruction.svh	/^  virtual function bit has_rs1_val_set();$/;"	f
+has_rs2	..\instruction.svh	/^  virtual function bit has_rs2();$/;"	f
+has_rs2_val_set	..\instruction.svh	/^  virtual function bit has_rs2_val_set();$/;"	f
+has_vi	..\uvm\i32_agent.svh	/^    bit has_vi;$/;"	v
+hex_file_analyzer	..\hex_file_analyzer.svh	/^class hex_file_analyzer;$/;"	c
+hex_file_analyzer_unit_test	..\hex_file_analyzer_unit_test.sv	/^module hex_file_analyzer_unit_test;$/;"	m
+hex_fn	..\hex_file_analyzer.svh	/^      string hex_fn;$/;"	v
+i32_agent	..\uvm\i32_agent.svh	/^class i32_agent extends uvm_agent;$/;"	c
+i32_agent_unit_test	..\uvm\i32_agent_unit_test.sv	/^module i32_agent_unit_test;$/;"	m
+i32_agent_wrapper	..\uvm\i32_agent_unit_test.sv	/^class i32_agent_wrapper extends i32_agent;$/;"	c
+i32_cov_subscriber	..\uvm\i32_cov_subscriber.svh	/^class i32_cov_subscriber extends uvm_subscriber#(i32_item);$/;"	c
+i32_item	..\uvm\i32_item.svh	/^class i32_item extends uvm_sequence_item;$/;"	c
+i32_monitor	..\uvm\i32_monitor.svh	/^class i32_monitor extends uvm_monitor;$/;"	c
+i32_name	..\uvm\uvc_env.svh	/^      string i32_name = $psprintf("m_i32_agent[%0d]",i);      $/;"	v
+i_inst_t	..\riscv_vip_pkg.sv	/^  } i_inst_t;$/;"	e
+i_shamt_inst_t	..\riscv_vip_pkg.sv	/^  } i_shamt_inst_t;$/;"	e
+imm_10_1	..\riscv_vip_pkg.sv	/^    logic [30-21:0]    imm_10_1;$/;"	v
+imm_10_5	..\riscv_vip_pkg.sv	/^    logic [30-25:0]    imm_10_5;$/;"	v
+imm_11	..\riscv_vip_pkg.sv	/^    logic              imm_11;      $/;"	v
+imm_11	..\riscv_vip_pkg.sv	/^    logic              imm_11;$/;"	v
+imm_11_5	..\riscv_vip_pkg.sv	/^    logic [31-25:0]    imm_11_5;$/;"	v
+imm_12	..\riscv_vip_pkg.sv	/^    logic              imm_12;$/;"	v
+imm_19_12	..\riscv_vip_pkg.sv	/^    logic [19-12:0]    imm_19_12;$/;"	v
+imm_20	..\riscv_vip_pkg.sv	/^    logic              imm_20;$/;"	v
+imm_31_12	..\riscv_vip_pkg.sv	/^    logic [31-12:0]    imm_31_12;$/;"	v
+imm_4_0	..\riscv_vip_pkg.sv	/^    logic [11-07:0]    imm_4_0;$/;"	v
+imm_4_1	..\riscv_vip_pkg.sv	/^    logic [11-08:0]    imm_4_1;$/;"	v
+imm_code	..\instruction.svh	/^                                                           bit[31:25] imm_code$/;"	v
+imm_code	..\instruction_unit_test.sv	/^                                  bit [31-25:0] imm_code,$/;"	v
+imm_code	..\instruction_unit_test.sv	/^        bit [31-25:0] imm_code;  \/\/ the higher bits of typical imm, higher than the shamt field$/;"	v
+imm_code	..\riscv_vip_pkg.sv	/^    logic [31:25]	imm_code;$/;"	v
+imm_high_t	..\riscv_vip_pkg.sv	/^  typedef logic [IMM_HIGH_W-1 :0] imm_high_t;$/;"	e
+imm_high_t	..\riscv_vip_pkg.sv	/^  typedef logic [IMM_HIGH_W-1 :0] imm_high_t;$/;"	v
+imm_low_t	..\riscv_vip_pkg.sv	/^  typedef logic [IMM_LOW_W-1  :0] imm_low_t; $/;"	e
+imm_low_t	..\riscv_vip_pkg.sv	/^  typedef logic [IMM_LOW_W-1  :0] imm_low_t; $/;"	v
+init_tracker	..\uvm\i32_monitor.svh	/^   virtual function void init_tracker();$/;"	f
+inst16	..\instruction.svh	/^virtual class inst16;$/;"	c
+inst16	..\riscv_vip_class_pkg.sv	/^  typedef class inst16;$/;"	e
+inst16_ciformat	..\instruction.svh	/^class inst16_ciformat extends inst16;$/;"	c
+inst16_ciformat	..\riscv_vip_class_pkg.sv	/^  typedef class inst16_ciformat;  $/;"	e
+inst32	..\instruction.svh	/^virtual class inst32;$/;"	c
+inst32	..\riscv_vip_class_pkg.sv	/^  typedef class inst32;$/;"	e
+inst32_bformat	..\instruction.svh	/^class inst32_bformat extends inst32;$/;"	c
+inst32_bformat	..\riscv_vip_class_pkg.sv	/^  typedef class inst32_bformat;$/;"	e
+inst32_iformat	..\instruction.svh	/^class inst32_iformat extends inst32;    $/;"	c
+inst32_iformat	..\riscv_vip_class_pkg.sv	/^  typedef class inst32_iformat;$/;"	e
+inst32_jformat	..\instruction.svh	/^class inst32_jformat extends inst32;$/;"	c
+inst32_jformat	..\riscv_vip_class_pkg.sv	/^  typedef class inst32_jformat;         $/;"	e
+inst32_rformat	..\instruction.svh	/^class inst32_rformat extends inst32;$/;"	c
+inst32_rformat	..\riscv_vip_class_pkg.sv	/^  typedef class inst32_rformat;$/;"	e
+inst32_sformat	..\instruction.svh	/^class inst32_sformat extends inst32;$/;"	c
+inst32_sformat	..\riscv_vip_class_pkg.sv	/^  typedef class inst32_sformat;$/;"	e
+inst32_uformat	..\instruction.svh	/^class inst32_uformat extends inst32;$/;"	c
+inst32_uformat	..\riscv_vip_class_pkg.sv	/^  typedef class inst32_uformat;         $/;"	e
+inst32_unit_test	..\instruction_unit_test.sv	/^module inst32_unit_test;$/;"	m
+inst_bits	..\instruction_unit_test.sv	/^       bit[31:0] inst_bits = 32'hfff08193;    $/;"	v
+inst_enum_t	..\riscv_vip_pkg.sv	/^  } inst_enum_t;$/;"	e
+inst_history	..\inst_history.svh	/^class inst_history#(int DEPTH = 5);  $/;"	c
+inst_history_subscriber	..\uvm\inst_history_subscriber.svh	/^class inst_history_subscriber extends uvm_subscriber#(i32_item);$/;"	c
+inst_history_unit_test	..\inst_history_unit_test.sv	/^module inst_history_unit_test;$/;"	m
+inst_str	..\uvm\i32_cov_subscriber.svh	/^    string inst_str;$/;"	v
+inst_str	..\uvm\i32_monitor.svh	/^     string inst_str;$/;"	v
+inst_str	..\uvm\inst_history_subscriber.svh	/^    string inst_str;$/;"	v
+inst_t	..\riscv_vip_pkg.sv	/^  } inst_t;$/;"	e
+interface	..\regfile_unit_test.sv	/^      \/\/Test that the wire interface to uut.get_x(i) works$/;"	v
+is_b_format	..\instruction.svh	/^  virtual function bit is_b_format();$/;"	f
+is_i_format	..\instruction.svh	/^  virtual function bit is_i_format();$/;"	f
+is_j_format	..\instruction.svh	/^  virtual function bit is_j_format();$/;"	f
+is_r_format	..\instruction.svh	/^  virtual function bit is_r_format();$/;"	f
+is_s_format	..\instruction.svh	/^  virtual function bit is_s_format();$/;"	f
+is_shamt	..\instruction.svh	/^  virtual function bit is_shamt();$/;"	f
+is_u_format	..\instruction.svh	/^  virtual function bit is_u_format();$/;"	f
+item_cnt	..\uvm\i32_agent_unit_test.sv	/^    int item_cnt;$/;"	v
+j_imm_t	..\riscv_vip_pkg.sv	/^  typedef logic [IMM_J_W-1    :0] j_imm_t;     \/\/J immediate, includes bit 0$/;"	e
+j_imm_t	..\riscv_vip_pkg.sv	/^  typedef logic [IMM_J_W-1    :0] j_imm_t;     \/\/J immediate, includes bit 0$/;"	v
+j_inst_t	..\riscv_vip_pkg.sv	/^  } j_inst_t;$/;"	e
+m_core_id	..\uvm\i32_agent.svh	/^  int    m_core_id = -1;    $/;"	v
+m_core_id	..\uvm\i32_monitor.svh	/^  int                         m_core_id = -1;    $/;"	v
+m_cycle	..\uvm\i32_monitor.svh	/^  int unsigned                m_cycle = 0;$/;"	v
+m_cycles_apart	..\inst_history.svh	/^  int unsigned m_cycles_apart;$/;"	v
+m_decode_cycle	..\instruction.svh	/^  bit [63:0] m_decode_cycle;  \/\/The value of the cycle CSR when instruction decoded$/;"	v
+m_enable_c_type	..\decoder.svh	/^  static bit          m_enable_c_type = 0;  \/\/Enable [C]ompressed instruction set$/;"	v
+m_inst_enum_set	..\instruction.svh	/^  bit m_inst_enum_set = 0;$/;"	v
+m_last_pc	..\uvm\i32_monitor.svh	/^  logic [31:0]                m_last_pc = 'hFFFFFFFE;  $/;"	v
+m_mem	..\hex_file_analyzer.svh	/^  logic [7:0] m_mem  [0:NUM_MEM_BYTES-1];  \/\/memory for the hex file$/;"	v
+m_num_parcels	..\decoder.svh	/^  int       unsigned  m_num_parcels;$/;"	v
+m_parcel_index	..\decoder.svh	/^  int       unsigned  m_parcel_index;$/;"	v
+m_parcels	..\decoder.svh	/^  bit[15:0]           m_parcels[];$/;"	v
+m_rs1_val_set	..\instruction.svh	/^  bit m_rs1_val_set = 0;$/;"	v
+m_rs2_val_set	..\instruction.svh	/^  bit m_rs2_val_set = 0;$/;"	v
+m_strict	..\decoder.svh	/^  static bit          m_strict = 0;$/;"	v
+m_tracker_file	..\uvm\i32_monitor.svh	/^  int                         m_tracker_file;$/;"	v
+m_write_cnt	..\uvm\i32_agent_unit_test.sv	/^  int m_write_cnt = 0;$/;"	v
+monitored_csrs	..\csrs.svh	/^class monitored_csrs extends csrs;$/;"	c
+monitored_regfile	..\regfile.svh	/^class monitored_regfile extends regfile;$/;"	c
+more	..\decoder.svh	/^    int more = decode_len(inst_arg);$/;"	v
+name	..\.__testsuite.sv	/^  string name = "__ts";$/;"	v
+name	..\.testrunner.sv	/^  string name = "testrunner";$/;"	v
+name	..\csrs_unit_test.sv	/^  string name = "csrs_ut";$/;"	v
+name	..\hex_file_analyzer_unit_test.sv	/^  string name = "hex_file_analyzer_ut";$/;"	v
+name	..\inst_history_unit_test.sv	/^  string name = "inst_history_ut";$/;"	v
+name	..\instruction_unit_test.sv	/^  string name = "inst32_ut";$/;"	v
+name	..\reg_fetcher_unit_test.sv	/^  string name = "reg_fetcher_ut";$/;"	v
+name	..\regfile_unit_test.sv	/^  string name = "regfile_ut";$/;"	v
+name	..\uvm\.__testsuite.sv	/^  string name = "__ts";$/;"	v
+name	..\uvm\.testrunner.sv	/^  string name = "testrunner";$/;"	v
+name	..\uvm\i32_agent_unit_test.sv	/^  string name = "i32_agent_ut";$/;"	v
+name	..\uvm\test\riscv_vip_base_test_unit_test.sv	/^  string name = "riscv_vip_base_test_unit_test_ut";$/;"	v
+name	..\uvm\uvc_env_unit_test.sv	/^  string name = "uvc_env_ut";$/;"	v
+need_next_parcel	..\decoder.svh	/^  virtual    function bit need_next_parcel();$/;"	f
+new	..\hex_file_analyzer.svh	/^  function new();$/;"	f
+new	..\inst_history.svh	/^  function new();$/;"	f
+new	..\instruction.svh	/^  function new(inst_t inst);     $/;"	f
+new	..\instruction.svh	/^  function new(inst_t inst);$/;"	f
+new	..\uvm\i32_agent.svh	/^  function new(string name, uvm_component parent);$/;"	f
+new	..\uvm\i32_agent_unit_test.sv	/^  function new(string name = "i32_agent_wrapper", uvm_component parent);$/;"	f
+new	..\uvm\i32_cov_subscriber.svh	/^  function new(string name, uvm_component parent = null); $/;"	f
+new	..\uvm\i32_item.svh	/^  function new(string name ="i32_item");$/;"	f
+new	..\uvm\i32_monitor.svh	/^  function new(string name, uvm_component parent);$/;"	f
+new	..\uvm\inst_history_subscriber.svh	/^  function new(string name, uvm_component parent = null); $/;"	f
+new	..\uvm\test\riscv_vip_base_test.svh	/^  function new(string name, uvm_component parent=null);$/;"	f
+new	..\uvm\test\riscv_vip_base_test_unit_test.sv	/^  function new(string name = "riscv_vip_base_test_wrapper", uvm_component parent);$/;"	f
+new	..\uvm\uvc_env.svh	/^  function new (string name, uvm_component parent);$/;"	f
+new	..\uvm\uvc_env_unit_test.sv	/^  function new(string name = "uvc_env_uvm_wrapper", uvm_component parent);$/;"	f
+new_from_funct3_imm	..\instruction.svh	/^  static function inst32_bformat new_from_funct3_imm(decoder my_decoder, $/;"	f
+new_from_funct3_imm	..\instruction.svh	/^  static function inst32_sformat new_from_funct3_imm(decoder my_decoder, $/;"	f
+new_from_funct3_shamt_imm	..\instruction.svh	/^  static function inst32_iformat new_from_funct3_shamt_imm($/;"	f
+new_from_imm	..\instruction.svh	/^  static function inst32_jformat new_from_imm(decoder my_decoder,$/;"	f
+new_from_op_imm	..\instruction.svh	/^  static function inst32_uformat new_from_op_imm(decoder my_decoder,$/;"	f
+new_nonspecial_from_funct3_op_imm	..\instruction.svh	/^  static function inst32_iformat new_nonspecial_from_funct3_op_imm($/;"	f
+new_rformat	..\instruction.svh	/^  static function inst32_rformat new_rformat($/;"	f
+obs	..\instruction_unit_test.sv	/^     string obs;$/;"	v
+obs_cov	..\inst_history_unit_test.sv	/^  real obs_cov, exp_cov;$/;"	v
+opcode_t	..\riscv_vip_pkg.sv	/^  typedef logic [OPCODE_W-1   :0] opcode_t;$/;"	e
+opcode_t	..\riscv_vip_pkg.sv	/^  typedef logic [OPCODE_W-1   :0] opcode_t;$/;"	v
+ops	..\riscv_vip_pkg.sv	/^  \/\/R instruction type (reg\/reg ops)$/;"	v
+parcel	..\hex_file_analyzer.svh	/^      bit [15:0] parcel;$/;"	v
+pass	..\instruction_unit_test.sv	/^    bit pass = 0;$/;"	v
+pc_insts	..\uvm\i32_agent_unit_test.sv	/^    const logic [31:0] pc_insts [][2] = '{$/;"	v
+pc_insts	..\uvm\test\riscv_vip_base_test_unit_test.sv	/^    const logic [31:0] pc_insts [][2] = '{$/;"	v
+pc_insts	..\uvm\uvc_env_unit_test.sv	/^    const logic [31:0] pc_insts [][2] = '{$/;"	v
+peek_age	..\inst_history.svh	/^  virtual function inst32 peek_age(int age);$/;"	f
+peek_newest	..\inst_history.svh	/^  virtual function inst32 peek_newest();$/;"	f
+peek_oldest	..\inst_history.svh	/^  virtual function inst32 peek_oldest();$/;"	f
+post_examine	..\inst_history.svh	/^  virtual function post_examine();$/;"	f
+r_inst_t	..\riscv_vip_pkg.sv	/^  } r_inst_t;$/;"	e
+raw_bits	..\riscv_vip_pkg.sv	/^    logic [31:0]       raw_bits;$/;"	v
+raw_hazard_examiner	..\inst_history.svh	/^class raw_hazard_examiner;$/;"	c
+raw_rs_case_enum_t	..\inst_history.svh	/^  typedef enum {RS1_ONLY, RS2_ONLY, RS1AND2, NONE} raw_rs_case_enum_t;$/;"	e
+reg_fetcher	..\reg_fetcher.svh	/^class reg_fetcher;  $/;"	c
+reg_fetcher_unit_test	..\reg_fetcher_unit_test.sv	/^module reg_fetcher_unit_test;$/;"	m
+reg_id_t	..\riscv_vip_pkg.sv	/^  } reg_id_t;$/;"	e
+regfile	..\regfile.svh	/^class regfile;    $/;"	c
+regfile_unit_test	..\regfile_unit_test.sv	/^module regfile_unit_test;$/;"	m
+regsel_t	..\riscv_vip_pkg.sv	/^  typedef logic [REGSEL_W-1   :0] regsel_t;   \/\/type for register rd, rs1\/2$/;"	e
+regsel_t	..\riscv_vip_pkg.sv	/^  typedef logic [REGSEL_W-1   :0] regsel_t;   \/\/type for register rd, rs1\/2$/;"	v
+remaining_parcels	..\decoder.svh	/^    int  remaining_parcels;$/;"	v
+report_phase	..\uvm\i32_monitor.svh	/^  virtual function void report_phase(uvm_phase phase);$/;"	f
+riscv_vip_base_test	..\uvm\test\riscv_vip_base_test.svh	/^class riscv_vip_base_test extends uvm_test;$/;"	c
+riscv_vip_base_test_unit_test	..\uvm\test\riscv_vip_base_test_unit_test.sv	/^module riscv_vip_base_test_unit_test;$/;"	m
+riscv_vip_base_test_wrapper	..\uvm\test\riscv_vip_base_test_unit_test.sv	/^class riscv_vip_base_test_wrapper extends riscv_vip_test_pkg::riscv_vip_base_test;$/;"	c
+riscv_vip_csr_if	..\riscv_vip_csr_if.sv	/^interface riscv_vip_csr_if (input clk, input rstn);$/;"	i
+riscv_vip_inst_if	..\riscv_vip_inst_if.sv	/^interface riscv_vip_inst_if (input clk, input rstn);$/;"	i
+riscv_vip_regfile_if	..\riscv_vip_regfile_if.sv	/^interface riscv_vip_regfile_if (input clk, input rstn);$/;"	i
+rp	..\hex_file_analyzer.svh	/^      int unsigned rp; \/\/remaining parcels$/;"	v
+rs1_raw	..\inst_history.svh	/^      bit rs1_raw = $/;"	v
+rs1_val_matches	..\reg_fetcher_unit_test.sv	/^        bit rs1_val_matches;$/;"	v
+rs2_raw	..\inst_history.svh	/^      bit rs2_raw = $/;"	v
+rs2_val_matches	..\reg_fetcher_unit_test.sv	/^        bit rs2_val_matches;$/;"	v
+rs_vals	..\instruction.svh	/^    string rs_vals ="";$/;"	v
+rstn	..\csrs_unit_test.sv	/^  logic rstn; $/;"	v
+rstn	..\hex_file_analyzer_unit_test.sv	/^  logic rstn; $/;"	v
+rstn	..\inst_history_unit_test.sv	/^  logic rstn; $/;"	v
+rstn	..\instruction_unit_test.sv	/^  logic rstn; $/;"	v
+rstn	..\reg_fetcher_unit_test.sv	/^  logic rstn; $/;"	v
+rstn	..\regfile_unit_test.sv	/^  logic rstn; $/;"	v
+rstn	..\uvm\i32_agent_unit_test.sv	/^  logic rstn; $/;"	v
+rstn	..\uvm\test\riscv_vip_base_test_unit_test.sv	/^  logic rstn; $/;"	v
+rstn	..\uvm\uvc_env_unit_test.sv	/^  logic rstn; $/;"	v
+run	..\.__testsuite.sv	/^  task run();$/;"	t
+run	..\.testrunner.sv	/^  task run();$/;"	t
+run	..\uvm\.__testsuite.sv	/^  task run();$/;"	t
+run	..\uvm\.testrunner.sv	/^  task run();$/;"	t
+run_monitor	..\csrs.svh	/^  virtual task run_monitor();$/;"	t
+run_monitor	..\regfile.svh	/^  virtual task run_monitor();$/;"	t
+run_phase	..\uvm\i32_agent.svh	/^  virtual task run_phase(uvm_phase phase);$/;"	t
+run_phase	..\uvm\i32_monitor.svh	/^  virtual task run_phase(uvm_phase phase);$/;"	t
+run_phase	..\uvm\test\riscv_vip_base_test.svh	/^  task run_phase(uvm_phase phase);$/;"	t
+run_phase	..\uvm\uvc_env.svh	/^task uvc_env::run_phase(uvm_phase phase);$/;"	t
+rv_addr_t	..\riscv_vip_pkg.sv	/^  typedef logic [RV_ADDR_W-1  :0] rv_addr_t;$/;"	e
+rv_addr_t	..\riscv_vip_pkg.sv	/^  typedef logic [RV_ADDR_W-1  :0] rv_addr_t;$/;"	v
+rvg_format_str	..\instruction.svh	/^    string rvg_format_str = m_rvg_format.name();$/;"	v
+rvg_format_str	..\instruction.svh	/^    string rvg_format_str;$/;"	v
+rvg_format_t	..\riscv_vip_pkg.sv	/^  } rvg_format_t;$/;"	e
+rvg_major_opcode_t	..\riscv_vip_pkg.sv	/^  }rvg_major_opcode_t;$/;"	e
+s_inst_t	..\riscv_vip_pkg.sv	/^  } s_inst_t;$/;"	e
+sample_cov	..\instruction.svh	/^  virtual function void sample_cov();$/;"	f
+set_m_csrs	..\csrs.svh	/^  virtual function void set_m_csrs(csrs_t m_csrs);$/;"	f
+set_m_regfile	..\reg_fetcher.svh	/^  virtual function void set_m_regfile(regfile rf);$/;"	f
+set_m_vif	..\csrs.svh	/^  virtual function void set_m_vif(vif_t csr_vif);$/;"	f
+set_m_vif	..\regfile.svh	/^  virtual function void set_m_vif(vif_t vif);$/;"	f
+set_m_x_regfile_array	..\regfile.svh	/^  virtual function void set_m_x_regfile_array(x_regfile_array_t x);$/;"	f
+set_next_parcel	..\decoder.svh	/^  virtual    function void set_next_parcel(bit[15:0] parcel);$/;"	f
+set_rs1_val	..\instruction.svh	/^  virtual function void set_rs1_val(xlen_t val);$/;"	f
+set_rs2_val	..\instruction.svh	/^  virtual function void set_rs2_val(xlen_t val);$/;"	f
+setup	..\csrs_unit_test.sv	/^  task setup();$/;"	t
+setup	..\hex_file_analyzer_unit_test.sv	/^  task setup();$/;"	t
+setup	..\inst_history_unit_test.sv	/^  task setup();$/;"	t
+setup	..\instruction_unit_test.sv	/^  task setup();$/;"	t
+setup	..\reg_fetcher_unit_test.sv	/^  task setup();$/;"	t
+setup	..\regfile_unit_test.sv	/^  task setup();$/;"	t
+setup	..\uvm\i32_agent_unit_test.sv	/^  task setup();$/;"	t
+setup	..\uvm\test\riscv_vip_base_test_unit_test.sv	/^  task setup();$/;"	t
+setup	..\uvm\uvc_env_unit_test.sv	/^  task setup();$/;"	t
+shamt_t	..\riscv_vip_pkg.sv	/^  typedef logic [SHAMT_W-1    :0] shamt_t;     \/\/I type's shift amount field$/;"	e
+shamt_t	..\riscv_vip_pkg.sv	/^  typedef logic [SHAMT_W-1    :0] shamt_t;     \/\/I type's shift amount field$/;"	v
+sint	..\instruction.svh	/^       int sint = signed'(get_imm());$/;"	v
+sint	..\instruction.svh	/^    int  sint = signed'(get_imm());        $/;"	v
+sint	..\instruction.svh	/^    int  sint = signed'(get_imm());    $/;"	v
+sint	..\instruction.svh	/^    int sint = signed'(get_imm());$/;"	v
+size	..\inst_history.svh	/^  virtual function int size();$/;"	f
+size	..\inst_history_unit_test.sv	/^  int size;$/;"	v
+str	..\instruction.svh	/^    string str = $psprintf("%08H %s ", m_inst, rvg_format_str);$/;"	v
+str	..\instruction.svh	/^    string str;$/;"	v
+string_match	..\reg_fetcher_unit_test.sv	/^        bit string_match;$/;"	v
+string_val	..\reg_fetcher_unit_test.sv	/^        string string_val;$/;"	v
+teardown	..\csrs_unit_test.sv	/^  task teardown();$/;"	t
+teardown	..\hex_file_analyzer_unit_test.sv	/^  task teardown();$/;"	t
+teardown	..\inst_history_unit_test.sv	/^  task teardown();$/;"	t
+teardown	..\instruction_unit_test.sv	/^  task teardown();$/;"	t
+teardown	..\reg_fetcher_unit_test.sv	/^  task teardown();$/;"	t
+teardown	..\regfile_unit_test.sv	/^  task teardown();$/;"	t
+teardown	..\uvm\i32_agent_unit_test.sv	/^  task teardown();$/;"	t
+teardown	..\uvm\test\riscv_vip_base_test_unit_test.sv	/^  task teardown();$/;"	t
+teardown	..\uvm\uvc_env_unit_test.sv	/^  task teardown();$/;"	t
+test_b_imm	..\instruction_unit_test.sv	/^  task automatic test_b_imm($/;"	t
+test_i_ns_imm	..\instruction_unit_test.sv	/^  task automatic test_i_ns_imm($/;"	t
+test_i_shamt_imm	..\instruction_unit_test.sv	/^  task automatic test_i_shamt_imm($/;"	t
+test_j_imm	..\instruction_unit_test.sv	/^  task automatic test_j_imm($/;"	t
+test_s_imm	..\instruction_unit_test.sv	/^  task automatic test_s_imm($/;"	t
+test_u_imm	..\instruction_unit_test.sv	/^  task automatic test_u_imm($/;"	t
+testrunner	..\.testrunner.sv	/^module testrunner();$/;"	m
+testrunner	..\uvm\.testrunner.sv	/^module testrunner();$/;"	m
+to_string	..\instruction.svh	/^  virtual function string to_string();$/;"	f
+toggle_clock	..\csrs_unit_test.sv	/^  task toggle_clock();$/;"	t
+toggle_clock	..\reg_fetcher_unit_test.sv	/^  task toggle_clock();$/;"	t
+toggle_clock	..\regfile_unit_test.sv	/^  task toggle_clock();$/;"	t
+toggle_clock	..\uvm\i32_agent_unit_test.sv	/^  task toggle_clock();$/;"	t
+toggle_clock	..\uvm\test\riscv_vip_base_test_unit_test.sv	/^  task toggle_clock();$/;"	t
+toggle_clock	..\uvm\uvc_env_unit_test.sv	/^  task toggle_clock();$/;"	t
+track_item	..\uvm\i32_monitor.svh	/^   virtual function void track_item();$/;"	f
+tracker_fn	..\uvm\i32_monitor.svh	/^     string tracker_fn;$/;"	v
+types	..\riscv_vip_pkg.sv	/^  \/\/Instruction Common bit\/logic types$/;"	v
+u_inst_t	..\riscv_vip_pkg.sv	/^  } u_inst_t;$/;"	e
+unsigned	..\decoder.svh	/^  static function int unsigned calc_num_parcels(bit[15:0] parcel0);$/;"	f
+unsigned	..\decoder.svh	/^  virtual    function int unsigned decode_len(bit[15:0] parcel0);$/;"	f
+uvc_env	..\uvm\uvc_env.svh	/^class uvc_env extends uvm_env;$/;"	c
+uvc_env_unit_test	..\uvm\uvc_env_unit_test.sv	/^module uvc_env_unit_test;$/;"	m
+uvc_env_uvm_wrapper	..\uvm\uvc_env_unit_test.sv	/^class uvc_env_uvm_wrapper extends riscv_vip_uvc_pkg::uvc_env;$/;"	c
+values	..\reg_fetcher.svh	/^\/\/ This fetches the general purpose reg values for a given instruction $/;"	v
+values	..\uvm\i32_monitor.svh	/^      m_reg_fetcher.fetch_regs(item.m_inst);  \/\/associate the reg values w\/ instruction$/;"	v
+vif_t	..\csrs.svh	/^  typedef virtual riscv_vip_csr_if vif_t; $/;"	e
+vif_t	..\regfile.svh	/^  typedef virtual riscv_vip_regfile_if vif_t;$/;"	e
+void	..\hex_file_analyzer.svh	/^  function automatic void load_mem_from_hex_file(string fn);    $/;"	f
+write	..\uvm\i32_agent_unit_test.sv	/^  function void write(i32_item item);$/;"	f
+write	..\uvm\i32_cov_subscriber.svh	/^  function void write(i32_item t); $/;"	f
+write	..\uvm\inst_history_subscriber.svh	/^  function void write(i32_item t); $/;"	f
+x_regfile_array_t	..\riscv_vip_pkg.sv	/^  typedef logic [NUM_X_REGS-1:1][XLEN-1      :0] x_regfile_array_t;   $/;"	e
+x_regfile_array_t	..\riscv_vip_pkg.sv	/^  typedef logic [NUM_X_REGS-1:1][XLEN-1      :0] x_regfile_array_t;   $/;"	v
+xlen_t	..\riscv_vip_pkg.sv	/^  typedef logic [XLEN-1      :0]  xlen_t;                  \/\/general purpose reg xn $/;"	e
+xlen_t	..\riscv_vip_pkg.sv	/^  typedef logic [XLEN-1      :0]  xlen_t;                  \/\/general purpose reg xn $/;"	v
