@@ -17,7 +17,10 @@ set wildmode=list:longest
 set wildmenu                "enable ctrl-n and ctrl-p to scroll thru matches
 "The file VimCompletesMe.vim is used for auto-completing using <tab>
 " Dictionary Usage
-set dictionary+=~/.vim/etc/*.dict
+set dictionary+=~/.vim/etc/sv.dict
+set dictionary+=~/.vim/etc/uvm.dict
+"set dictionary +=$HOME/.vim/etc/*.dict
+"$HOME/.vim/etc
 " Enables the VimCompletesMe.vim to use <tab> to search in dictionary
 autocmd FileType sv setlocal complete+=k~/.vim/etc/*.dict
 " For Line completion use Ctrl-x Ctrl-l
