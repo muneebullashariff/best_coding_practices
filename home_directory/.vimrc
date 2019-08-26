@@ -76,7 +76,9 @@ colorscheme darkblue
 " This will open the gui and u can select the font style
 
 " If you know the font style and size
-set guifont=Consolas:h12  
+set guifont=Consolas:h12 
+" set guifont=Consolas:h12 is the syntax to set font and size, but it might not work for some systems.
+" so use set guifont=Consolas\ 12 in those cases instead
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
@@ -171,8 +173,10 @@ call AbbrevFunction()
 " While setting the macros via let, <CR> for new line won't work
 " We need to go in insert-mode use Cntl+v and then Enter to get ^M
 " End result is @a=:!ls<CR>:!pwd<CR>
-"let @a=':!ls'
-"let @a=@a.':!pwd'
+"let @a=':!ls
+'
+"let @a=@a.':!pwd
+'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Setting the required things for Tags
