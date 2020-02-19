@@ -1,5 +1,5 @@
 More UVM keywords can be found at ver_sv_uvm.vim
-uvm_active_passive_enum
+uvm_active_passive_enum 
 uvm_adaptor
 uvm_analysis_imp
 uvm_barrier
