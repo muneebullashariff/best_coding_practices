@@ -217,6 +217,7 @@ get_num_waiters
 get_objection
 get_parent
 get_phase_type
+get_port
 get_sequence_path
 get_starting_phase
 get_trigger_data
@@ -249,6 +250,7 @@ print
 print_real
 print_topology
 put
+put_port
 raise_objection
 ralgen
 read_by_name
