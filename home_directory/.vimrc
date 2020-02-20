@@ -57,8 +57,7 @@ set ruler
 
 " Color schemes to choose from
 set t_Co=256 
-colorscheme darkblue
-
+"colorscheme darkblue
 "colorscheme LightColor
 "colorscheme JellybeansColor
 "colorscheme solarized
@@ -77,15 +76,28 @@ colorscheme darkblue
 
 " If you know the font style and size
 "set guifont=Consolas:h12 
-set guifont=DejaVu\ Sans\ Mono\ 14 
+"set guifont=DejaVu\ Sans\ Mono\ 14 
 " set guifont=Consolas:h12 is the syntax to set font and size, but it might not work for some systems.
 " so use set guifont=Consolas\ 12 in those cases instead
 
+if has("gui_running")
+  set background=dark
+  "colorscheme darkblue
+  colorscheme PaperColor
+  set guifont=DejaVu\ Sans\ Mono\ 15 
+else
+  " since the terminal will be dark usually
+  " Also, the vim will take the font and style
+  " as that of the terminal
+  set background=dark
+  colorscheme PaperColor
+endif
+
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
-set history=50		" keep 50 lines of command line history
+set history=50	" keep 50 lines of command line history
 set ruler		    " show the cursor position all the time
-set showcmd		    " display incomplete commands
+set showcmd		  " display incomplete commands
 set incsearch		" do incremental searching
 
 " Sometimes irritates this. Hence commenting it out
@@ -113,21 +125,27 @@ set hlsearch
 " Setting the colum width 100 considering UVM library  
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let no_of_char_per_line  = 100 
-let no_of_lines_per_page = 50 
+let no_of_lines_per_page = 100 
 
 " we can assign the set options via let-variables only through execute
 execute("set colorcolumn=".no_of_char_per_line)
-highlight ColorColumn ctermbg=gray
+highlight ColorColumn ctermbg=white guibg=grey 
 
-" Automatically wraps the text while coding
-" If things don't work then instead of setlocal do set
-autocmd FileType sv execute ("setlocal textwidth=".(no_of_char_per_line-2))
+" This code is executed only for GUI application(gvim)
+" We can also use ~/.gvimrc file
+" First the ~/.vimrc file will be loaded then ~/.gvimrc
+if has("gui_running")
+  " Automatically wraps the text while coding
+  " If things don't work then instead of setlocal do set
+  autocmd FileType sv execute ("setlocal textwidth=".(no_of_char_per_line-2))
 
-" To set the window of a particular size
-" \Note: The values are added with +4 as the window occupies 
-" 4 lines and 4 columns extra  
-execute ("set lines=".(no_of_lines_per_page+4))
-execute ("set columns=".(no_of_char_per_line+4))
+  " To set the window of a particular size
+  " \Note: The values are added with +4 as the window occupies 
+  " 4 lines and 4 columns extra  
+  execute ("set lines=".(no_of_lines_per_page+4))
+  execute ("set columns=".(no_of_char_per_line+4))
+
+endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Setting the indentation fields
