@@ -10,6 +10,8 @@ set showmatch
 " :set filetype? to see what filetype is set for a file
 autocmd BufRead,BufNewFile *.v,*.vh,*.sv,*.svh,*.vlog,*.log  set filetype=sv 
 
+" SystemRDL syntax
+autocmd BufRead,BufNewFile *.rdl set filetype=systemrdl
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Completion
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -217,6 +219,7 @@ highlight MyGroup ctermbg=blue guibg=peru guifg=wheat
 let g:hl_matchit_hl_groupname = 'MyGroup'
 
 au BufNewFile,BufRead *.sv,*.svh,*.vh,*.v so ~/.vim/syntax/ver_sv_uvm.vim
+au BufNewFile,BufRead *.rdl so ~/.vim/syntax/systemrdl.vim
 au BufNewFile,BufRead *.sv,*.svh,*.vh,*.v so ~/.vim/indent/sv/indent.vim
 au BufNewFile,BufRead *.sv,*.svh,*.vh,*.v so ~/.vim/ftplugin/sv/folding.vim
 
