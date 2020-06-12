@@ -27,6 +27,9 @@ syn keyword rdlStatement regfile
 syn keyword rdlStatement reg
 syn keyword rdlStatement field
 syn keyword rdlStatement default
+syn keyword rdlStatement property 
+syn keyword rdlStatement true 
+syn keyword rdlStatement false 
 
 syn match   rdlProperty  "\(->\s*\)\@<!\<[a-zA-Z0-9_]\+\>\ze\s*="
 
