@@ -168,6 +168,11 @@ execute ("set softtabstop=".spaces_per_tab)
 " Expand TABs to spaces
 set expandtab
 
+"" Used for python 
+""set et|retab
+"" or 
+" :retab
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" Enabling automatic continuation on text, comments to next line
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
