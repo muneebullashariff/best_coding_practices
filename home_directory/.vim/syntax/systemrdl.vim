@@ -30,6 +30,11 @@ syn keyword rdlStatement default
 syn keyword rdlStatement property 
 syn keyword rdlStatement true 
 syn keyword rdlStatement false 
+syn keyword rdlStatement lsb0 
+syn keyword rdlStatement littleendian 
+syn keyword rdlStatement bigendian 
+syn keyword rdlStatement woclr 
+syn keyword rdlStatement woset
 
 syn match   rdlProperty  "\(->\s*\)\@<!\<[a-zA-Z0-9_]\+\>\ze\s*="
 
