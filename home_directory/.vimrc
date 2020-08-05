@@ -227,6 +227,7 @@ au BufNewFile,BufRead *.sv,*.svh,*.vh,*.v so ~/.vim/syntax/ver_sv_uvm.vim
 au BufNewFile,BufRead *.rdl so ~/.vim/syntax/systemrdl.vim
 au BufNewFile,BufRead *.sv,*.svh,*.vh,*.v so ~/.vim/indent/sv/indent.vim
 au BufNewFile,BufRead *.sv,*.svh,*.vh,*.v so ~/.vim/ftplugin/sv/folding.vim
+au BufNewFile,BufRead *.sv,*.svh so ~/.vim/templates/template_functions.vim
 
 " Required only in windows
 au BufNewFile,BufRead *.sv,*.svh,*.vh,*.v so ~/.vim/plugin/tag_jump.vim
