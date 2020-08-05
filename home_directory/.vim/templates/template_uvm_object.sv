@@ -9,7 +9,7 @@ class <<user_classname>> extends uvm_object;
   `uvm_object_utils(<<user_classname>>)
 
   //-------------------------------------------------------
-  //Externally defined Tasks and Functions 
+  // Externally defined Tasks and Functions 
   //-------------------------------------------------------
   extern function new(string name = "<<user_classname>>");
 endclass: <<user_classname>>
