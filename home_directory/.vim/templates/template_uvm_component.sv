@@ -9,7 +9,7 @@ class <<user_classname>> extends uvm_component;
   `uvm_component_utils(<<user_classname>>)
 
   //-------------------------------------------------------
-  //Externally defined Tasks and Functions 
+  // Externally defined Tasks and Functions 
   //-------------------------------------------------------
   extern function new(string name = "<<user_classname>>", uvm_component parent = null);
   extern virtual function void build_phase(uvm_phase phase);
