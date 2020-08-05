@@ -21,21 +21,36 @@ endfunction
 " Loading the template with required substitution
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 function LoadTemplate(tmpl_file, class_name)
-    exe "0read " . a:tmpl_file
+    " read inserts below the cursor, 
+    " {range}read inserts below the specified line. 
+    " Using 0 as the {range} inserts at the top of the buffer.
+    " $read to the end 
+    let usr_template = line(".")-1 . "read " . a:tmpl_file
+    exe usr_template
+
+    " Substitute the required fields in the template
     let substDict = {}
     let substDict["name"] = $USER
     let substDict["date"] = strftime("%Y %b %d %X")
     let substDict["user_classname"] = a:class_name
     let substDict["USER_FILENAME"] = toupper(a:class_name)
     exe '%s/<<\([^>]*\)>>/\=substDict[submatch(1)]/g'
+
+    "  '. : Jump to last modification line.
+    "  `. : Jump to exact spot in last modification line
+    "  Basically jump the cursor to the start of the code that's inserted
+    normal `.
+
     " Removes the last blank line
-    normal Gdd
+    "normal Gdd
+
     " The set nomodified tells Vim that the file was not modified. 
     " That way you can exit the file with :q as long as you don't add additional text. 
     " Usefull if you typed the wrong file name.
     set nomodified
+
     " Moves the cursor to the firts line
-    normal gg
+    "normal gg
     " Moves the cursor to the last line
     "normal G
 endfunction
