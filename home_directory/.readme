@@ -1,0 +1,4 @@
+If you want to keep the ~/.vimrc in sync with git then do as follows:
+
+~/.vimrc
+source ~/Best-Coding-Practices-/home_directory/.vimrc
