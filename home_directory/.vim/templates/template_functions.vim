@@ -1,8 +1,16 @@
+"" Like include guards
+"" To prevent multiple declaration of the same function(s)
+if exists('g:my_template_functions')
+  finish
+endif
+
+" Note: use function! to override existing functions. 
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Function: UvmCompTemp
 " Template for UVM componet for SystemVerilog language
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-function UvmCompTemp(class_name)
+function! UvmCompTemp(class_name)
     let tmpl_file = "~/.vim/templates/template_uvm_component.sv"
     call LoadTemplate(tmpl_file, a:class_name)
 endfunction
@@ -11,7 +19,7 @@ endfunction
 " Function: UvmObjTemp
 " Template for UVM object for SystemVerilog language
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-function UvmObjTemp(class_name)
+function! UvmObjTemp(class_name)
     let tmpl_file = "~/.vim/templates/template_uvm_object.sv"
     call LoadTemplate(tmpl_file, a:class_name)
 endfunction
@@ -20,7 +28,7 @@ endfunction
 " Function: LoadTemplate 
 " Loading the template with required substitution
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-function LoadTemplate(tmpl_file, class_name)
+function! LoadTemplate(tmpl_file, class_name)
     " read inserts below the cursor, 
     " {range}read inserts below the specified line. 
     " Using 0 as the {range} inserts at the top of the buffer.
@@ -67,3 +75,5 @@ endfunction
 """    normal G
 """endfunction
 "autocmd BufNewFile *.sv,*.svh call AddTemplate("driver_test")
+
+let g:my_template_functions = 1
