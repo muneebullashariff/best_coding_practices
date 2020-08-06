@@ -87,6 +87,11 @@ set t_Co=256
 
 if has("gui_running")
   set background=dark
+  "macunix        Macintosh version of Vim, using Unix files (OS-X).
+  "unix           Unix version of Vim.
+  "win32          Win32 version of Vim (MS-Windows 95 and later, 32 or
+  "               64 bits)
+  "win32unix      Win32 version of Vim, using Unix files (Cygwin)
   if has('unix') 
     colorscheme darkblue
     "colorscheme PaperColor
