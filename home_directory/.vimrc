@@ -87,10 +87,16 @@ set t_Co=256
 
 if has("gui_running")
   set background=dark
-  colorscheme darkblue
-  set guifont=Consolas:h12
-  "colorscheme PaperColor
-  "set guifont=DejaVu\ Sans\ Mono\ 15 
+  if has('unix') 
+    colorscheme darkblue
+    "colorscheme PaperColor
+    "set guifont=Consolas\ 12
+    set guifont=DejaVu\ Sans\ Mono\ 13 
+  else  
+    colorscheme darkblue
+    set guifont=Consolas:h12
+    "colorscheme PaperColor
+  endif
 else
   " since the terminal will be dark usually
   " Also, the vim will take the font and style
