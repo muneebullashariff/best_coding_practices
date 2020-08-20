@@ -3,7 +3,7 @@ function AbbrevFunction()
   " After entering the abbreviation press space
   " iab - 'I'nsert 'AB'breviation
   iab ms // MSHA:
-  iab td // TODO:
+  iab td // TODO(mshariff):
   
   " License script
   iab lic 
