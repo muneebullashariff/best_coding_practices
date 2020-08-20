@@ -23,9 +23,9 @@
 2) Use of Include Guards
 `ifndef FILE_NAME_INCLUDED_
 `define FILE_NAME_INCLUDED_
-  .....
-  .....
-`endif // FILE_NAME_INCLUDED_
+.....
+.....
+`endif
 
 Example:
 `ifndef CODING_TEMPLATE_INCLUDED_
@@ -111,4 +111,4 @@ function string config_template::get_string_val();
 endfunction: get_string_val    
     
 4) Close of Include guard
-`endif // CODING_TEMPLATE_INCLUDED_
+`endif
