@@ -12,7 +12,7 @@ class <<user_classname>> extends uvm_object;
   // Externally defined Tasks and Functions
   //-------------------------------------------------------
   extern function new(string name = "<<user_classname>>");
-endclass: <<user_classname>>
+endclass : <<user_classname>>
 
 //--------------------------------------------------------------------------------------------
 // Construct: new
@@ -22,6 +22,6 @@ endclass: <<user_classname>>
 //--------------------------------------------------------------------------------------------
 function <<user_classname>>::new(string name = "<<user_classname>>");
   super.new(name);
-endfunction: new
+endfunction : new
 
-`endif // <<USER_FILENAME>>_INCLUDED_
+`endif
