@@ -96,4 +96,4 @@ task <<user_classname>>::run_phase(uvm_phase phaase);
 
 endtask: run_phase
 
-`endif // <<USER_FILENAME>>_INCLUDED_
+`endif
