@@ -21,12 +21,15 @@
 //  ###########################################################################
 
 2) Use of Include Guards
-`ifndef _FILE_NAME_INCLUDED_
-`define _FILE_NAME_INCLUDED_
+`ifndef FILE_NAME_INCLUDED_
+`define FILE_NAME_INCLUDED_
+.....
+.....
+`endif
 
 Example:
-`ifndef _CODING_TEMPLATE_INCLUDED_
-`define _CODING_TEMPLATE_INCLUDED_
+`ifndef CODING_TEMPLATE_INCLUDED_
+`define CODING_TEMPLATE_INCLUDED_
 
 3) Use of comments and code as per the coding guidelines
 

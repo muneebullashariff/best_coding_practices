@@ -82,11 +82,26 @@ set t_Co=256
 " set guifont=Consolas:h12 is the syntax to set font and size, but it might not work for some systems.
 " so use set guifont=Consolas\ 12 in those cases instead
 
+" To get available colorscheme in vim do as follows
+" :colorscheme [space] [Cntl+d]
+
 if has("gui_running")
   set background=dark
-  "colorscheme darkblue
-  colorscheme PaperColor
-  set guifont=DejaVu\ Sans\ Mono\ 15 
+  "macunix        Macintosh version of Vim, using Unix files (OS-X).
+  "unix           Unix version of Vim.
+  "win32          Win32 version of Vim (MS-Windows 95 and later, 32 or
+  "               64 bits)
+  "win32unix      Win32 version of Vim, using Unix files (Cygwin)
+  if has('unix') 
+    colorscheme darkblue
+    "colorscheme PaperColor
+    "set guifont=Consolas\ 12
+    set guifont=DejaVu\ Sans\ Mono\ 13 
+  else  
+    colorscheme darkblue
+    set guifont=Consolas:h12
+    "colorscheme PaperColor
+  endif
 else
   " since the terminal will be dark usually
   " Also, the vim will take the font and style
