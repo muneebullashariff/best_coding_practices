@@ -83,7 +83,7 @@ endfunction : start_of_simulation_phase
 // Parameters:
 //  phase - uvm phase
 //--------------------------------------------------------------------------------------------
-task <<user_classname>>::run_phase(uvm_phase phaase);
+task <<user_classname>>::run_phase(uvm_phase phase);
 
   phase.raise_objection(this, "<<user_classname>>");
 
