@@ -1,4 +1,21 @@
 " Define your other abbreviations here
+
+"" Used for perforce editing the current file
+"" from which this function is called
+function! Pe()
+  "let file_path = expand('%:p')
+  "!p4 edit file_path 
+  !p4 edit '%:p' 
+endfunction
+
+"" Used for perforce reverting the current file
+"" from which this function is called
+function! Pr()
+  "let file_path = expand('%:p')
+  "!p4 edit file_path 
+  !p4 revert '%:p' 
+endfunction
+
 function AbbrevFunction()
   " After entering the abbreviation press space
   " iab - 'I'nsert 'AB'breviation
