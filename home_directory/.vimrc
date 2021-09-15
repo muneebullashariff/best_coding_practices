@@ -93,8 +93,8 @@ if has("gui_running")
   "               64 bits)
   "win32unix      Win32 version of Vim, using Unix files (Cygwin)
   if has('unix') 
-    colorscheme darkblue
-    "colorscheme PaperColor
+    "colorscheme darkblue
+    colorscheme PaperColor
     "set guifont=Consolas\ 12
     set guifont=DejaVu\ Sans\ Mono\ 13 
   else  
