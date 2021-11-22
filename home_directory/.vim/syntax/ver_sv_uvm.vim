@@ -637,7 +637,7 @@ so $HOME/.vim/etc/color_uvm.vim
 : highlight link uvm_method  sky
 : highlight link uvm_class   sky
 : highlight link uvm_seq     sky
-: highlight link uvm_data    white
+: highlight link uvm_data    gray
 : highlight link uvm_phase   purple
 : highlight link svStatement Statement
 : highlight link Alert       red
