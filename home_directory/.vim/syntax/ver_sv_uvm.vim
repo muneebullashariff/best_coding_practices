@@ -172,6 +172,7 @@ syn keyword svStatement  randomize
 syn keyword svStatement  randsequence
 syn keyword svStatement  ref
 syn keyword svStatement  return
+syn keyword svStatement  s_until_with
 syn keyword svStatement  sample
 syn keyword svStatement  sequence
 syn keyword svStatement  shortint
@@ -828,7 +829,7 @@ so $HOME/.vim/etc/color_uvm.vim
 "       s_eventually
 "       s_nexttime
 "       s_until
-"       s_until_with
+" sa    s_until_with
 "       scalared
 " s     sequence
 " s     shortint
