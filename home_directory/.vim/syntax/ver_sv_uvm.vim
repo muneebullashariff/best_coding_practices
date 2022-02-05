@@ -569,7 +569,8 @@ syn keyword uvm_method   wait_on
 syn keyword uvm_method   wait_ptrigger
 syn keyword uvm_method   wait_trigger
 syn keyword uvm_method   with_phase
-syn match   uvm_method   /\<write_\w\+\>/
+syn keyword uvm_method   /\<write_\w\+\>/
+"syn match uvm_method   /\<write_\w\+\>/
 
 syn keyword uvm_phase    build_phase
 syn keyword uvm_phase    check_phase
