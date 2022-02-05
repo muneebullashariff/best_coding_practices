@@ -256,3 +256,4 @@ copy_from
 clone 
 to_string 
 compare
+s_until_with
