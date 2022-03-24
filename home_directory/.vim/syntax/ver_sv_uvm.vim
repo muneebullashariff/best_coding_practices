@@ -188,6 +188,7 @@ syn keyword svStatement  this
 syn keyword svStatement  throughout
 syn keyword svStatement  timeprecision
 syn keyword svStatement  timeunit
+syn keyword svStatement  triggered
 syn keyword svStatement  type
 syn keyword svStatement  type_option
 syn keyword svStatement  typedef
@@ -863,6 +864,7 @@ so $HOME/.vim/etc/color_uvm.vim
 " v     tranif0
 " v     tranif1
 " v     tri
+" s     triggered
 " v     tri0
 " v     tri1
 " v     triand
