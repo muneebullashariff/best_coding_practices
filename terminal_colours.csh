@@ -1,4 +1,4 @@
-
+# !/bin/tcsh
 setenv RED    '\e[0;31m'
 setenv BLACK  '\e[0;30m'
 setenv BLUE   '\e[0;34m'
