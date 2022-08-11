@@ -20,3 +20,6 @@ setenv NC     '\e[0m'
 ## echo "${RED}Muneeb${NC}"
 ## or
 ## echo -e "${RED}Muneeb${NC}"
+
+# a new line added by hemanth by forking the terminal colors
+# from muneeb ulla shariff github account:
