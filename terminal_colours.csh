@@ -21,15 +21,13 @@ setenv NC     '\e[0m'
 ## or
 ## echo -e "${RED}Muneeb${NC}"
 
-# for changing the text backgroundcolour
-# #
- setenv B_RED '\e[1;41m'
- setenv B_BLACK  '\e[1;40m'
- setenv B_BLUE   '\e[1;44m'
- setenv B_GREEN  '\e[1;42m'
- setenv B_CYAN   '\e[1;46m'
- setenv B_PURPLE '\e[1;45m'
- setenv B_BROWN  '\e[2;43m'
- setenv B_YELLOW '\e[1;43m'
- setenv B_WHITE  '\e[1;47m'
-
+## for changing the text backgroundcolour
+setenv B_RED '\e[1;41m'
+setenv B_BLACK  '\e[1;40m'
+setenv B_BLUE   '\e[1;44m'
+setenv B_GREEN  '\e[1;42m'
+setenv B_CYAN   '\e[1;46m'
+setenv B_PURPLE '\e[1;45m'
+setenv B_BROWN  '\e[2;43m'
+setenv B_YELLOW '\e[1;43m'
+setenv B_WHITE  '\e[1;47m'
