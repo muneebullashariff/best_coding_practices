@@ -1,5 +1,5 @@
-`ifndef <<USER_FILENAME>>_INCLUDED_
-`define <<USER_FILENAME>>_INCLUDED_
+`ifndef _<<USER_FILENAME>>_
+`define _<<USER_FILENAME>>_
 
 //--------------------------------------------------------------------------------------------
 // Class: <<user_classname>>
